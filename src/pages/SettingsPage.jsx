@@ -1,7 +1,9 @@
 import React, { useContext, useState } from "react";
 import { settingsContext } from "../Context";
+import { useNavigate } from "react-router-dom";
 
 const SettingsPage = () => {
+  const navigate = useNavigate();
   // Accessing settingsContext from parent component
   const settings = useContext(settingsContext);
   console.log(settings);
@@ -29,6 +31,11 @@ const SettingsPage = () => {
 
     // Call setSettings function to update settingsContext
     settings.setSetting(newSettings);
+
+    // navigate to the catalog page
+    setTimeout(() => {
+      navigate('/catalog')
+    }, 1000)
   };
 
   return (
