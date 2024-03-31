@@ -1,0 +1,263 @@
+/* App.css */
+
+h1 {
+  text-align: center;
+}
+
+/* Navbar1.css */
+.navbar1 {
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -15px;
+  /* margin-right: 200px; */
+  padding: 0 20px;
+}
+
+.navbar1-buttons button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Navbar2.css */
+.navbar2 {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  width: 200px; /* Adjust width as needed */
+  height: 100vh; /* Full height of viewport */
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  /* Apply styles for screens smaller than 768px (mobile devices) */
+  .navbar2 {
+    width: 100px; /* Set width to 100px for mobile devices */
+  }
+}
+
+.navbar2-header {
+  margin-bottom: 20px;
+}
+
+.navbar2-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+}
+
+.navbar2-button {
+  margin-bottom: 10px; /* Adjust spacing between buttons */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.navbar2-button button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center vertically */
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* CatalogPage.css */
+.catalog-page {
+  display: flex;
+}
+
+.display-row {
+  flex-direction: column;
+}
+
+.display-column {
+  flex-direction: row;
+}
+
+.navbar {
+  flex: 0 0 auto; /* Navbar should not grow or shrink */
+}
+
+.product-list {
+  flex: 1; /* Product list should take remaining space */
+}
+
+/* Cart Modal */
+.cart-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 9999;
+}
+
+.cart-modal-content {
+  text-align: center;
+}
+
+.cart-modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-modal button {
+  margin-top: 10px;
+}
+
+/* Product Card Style */
+
+/* Carousel Styles */
+/* Carousel Styles */
+.carousel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Maintain overflow hidden for the carousel */
+}
+
+.carousel {
+  display: flex; /* Change display to flex for easier alignment */
+  align-items: center; /* Center the items vertically */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  flex: 0 0 100%; /* Set initial width to 100% */
+  transition: transform 0.5s ease; /* Add transition for smooth slide effect */
+}
+
+.carousel-slide.active {
+  flex: 0 0 100%; /* Ensure active slide takes full width */
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Update font size */
+  color: #333;
+  padding: 0 10px; /* Add padding for better spacing */
+}
+
+.left {
+  order: 1; /* Change the order to move left arrow to the left */
+  left: 0; /* Add left position for left arrow */
+}
+
+.right {
+  order: 3; /* Change the order to move right arrow to the right */
+  right: 0; /* Add right position for right arrow */
+}
+
+/* View All Styles */
+.view-all-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.view-all {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-container,
+  .view-all-container {
+    padding: 0 20px;
+  }
+}
+
+/* App.css */
+
+/* WithButtons Styles */
+.with-buttons {
+  border: 3px solid #ccc; /* External border */
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  height: 400px;
+  margin: 5px;
+}
+
+.with-buttons img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card-title-with {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.with-buttons p {
+  margin-bottom: 5px;
+}
+
+.with-buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.with-buttons button:last-child {
+  margin-right: 0;
+}
+
+/* WithoutButtons Styles */
+.without-buttons {
+  border: 3px solid #ccc; /* External border */
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  height: 400px;
+  margin: 5px;
+}
+
+.without-buttons img {
+  max-width: 100%;
+  height: 225px;
+}
+
+.card-title-without {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 125px;
+  overflow-y: scroll;
+}
+
+.without-buttons p {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
